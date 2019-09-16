@@ -76,9 +76,16 @@ img {
 
 .content {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   padding: 0 4rem;
   margin: 0 auto;
+}
+
+hr {
+  max-width: 572px;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cecece;
 }
 
 @media (max-width: 600px) {
@@ -139,7 +146,6 @@ h1 {
 
 section:not(:first-of-type) {
   padding: 3rem 0 4rem 0;
-  border-top: 1px solid #cecece;
 }
 
 section:first-of-type {
@@ -189,7 +195,7 @@ img {
 }
 
 .title h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     margin: 0 2rem 0 0;
     font-family: 'Playfair Display SC', serif;
     letter-spacing: 4px;
@@ -248,6 +254,7 @@ header nav ul {
     margin: 0 auto;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    max-width: 600px;
 
 }
 
@@ -279,4 +286,8 @@ footer {
 
 .content h1, h2, h3 {
   text-align: left;
+}
+
+.issue-title {
+  font-size: 1.5rem;
 }

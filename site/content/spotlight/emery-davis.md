@@ -1,5 +1,7 @@
 ---
 artist: Emery Davis
+featuredArt:
+  - You Showed Me Love
 date: 2019-06-07
 cms: true
 title: Emery Davis Loves His Friends 

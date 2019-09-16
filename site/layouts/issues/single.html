@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<section>
+  <div class='content'>
+    <h1>{{.Title}}</h1>
+    {{ $ := .}}
+    {{ if .Params.featuredArt }}
+    {{ range .Params.featuredArt }}
+    {{$featuredArtTitle := .}}
+    {{ with $.Site.GetPage "artwork" }}
+    {{ range .Resources }}
+    {{ if eq $featuredArtTitle .Title }}
+    <article>
+      <h2>{{.Title}}</h2>
+      <h3>By {{.Params.artist}}</h3>
+      {{ .Content }}
+    </article>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ partial "footer.html" . }}
