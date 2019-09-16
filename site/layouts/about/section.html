@@ -1,11 +1,8 @@
 {{ partial "header.html" . }}
 <section>
   <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <h2>Editors</h2>
-  <ul>
-    <li>Editor: Natasha Mitchell</li>
-    <li>Website Creator: Stel Abrego</li>
-  </ul>
+  <div class='content'>
+    <p>{{ .Content }}</p>
+  </div>
 </section>
 {{ partial "footer.html" . }}
