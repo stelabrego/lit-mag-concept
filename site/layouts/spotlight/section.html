@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<section>
+<h1>Spotlights</h1>
+{{ range .Pages.ByDate.Reverse }}
+{{ $spotlightPage := . }}
+<div class="spotlight">
+  <div class='spotlight-content'>
+    {{ with .Site.GetPage "artists" }}
+    {{ range .Resources }}
+    {{ if eq .Params.name $spotlightPage.Params.artist }}
+    <div class="image">
+      <img src='{{ .Params.image | absURL }}' alt="">
+    </div>
+    <div class='text'>
+      <h3>{{ $spotlightPage.Date.Format "January 2006" }}</h3>
+      <a href='{{ $spotlightPage.Permalink }}'>
+        <h2 class="no-top-margin">{{ $spotlightPage.Params.artist }}</h2>
+      </a>
+      <p>
+        {{ .Summary }}
+      </p>
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}
+</section>
+{{ partial "footer.html" . }}

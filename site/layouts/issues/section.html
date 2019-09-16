@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<section>
+  <h1>Issues</h1>
+  {{ if eq (len .Pages) 0 }}
+  <p>No issues yet!</p>
+  {{ end }}
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="issue">
+    <a href={{ .Permalink }}>
+      <h2>{{ .Title }}</h2>
+    </a>
+    <h3>{{ .PublishDate.Format "January 2006" }}</h3>
+  </article>
+  {{ end }}
+</section>
+{{ partial "footer.html" . }}

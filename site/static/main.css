@@ -1,0 +1,255 @@
+:root {
+  --bg-shapes: rgb(241, 241, 241);
+}
+
+body {
+    background-color: #c1c7c7;
+    min-height: 100vh;
+    font-family: serif;
+    padding: 0 1rem;
+    background: radial-gradient(circle, var(--bg-shapes) 0.75em, rgba(255, 255, 255, 0) 5em, rgba(255, 255, 255, 0) 20em, var(--bg-shapes) 1.5em, var(--bg-shapes) 1.8em, rgba(255, 255, 255, 0) 1.8em) 0 0, radial-gradient(circle, var(--bg-shapes) 0.75em, rgba(255, 255, 255, 0) 0.75em, rgba(255, 255, 255, 0) 1.5em, var(--bg-shapes) 1.5em, var(--bg-shapes) 1.8em, rgba(255, 255, 255, 0) 1.8em) 3em 3em, radial-gradient(circle, var(--bg-shapes) 0.375em, rgba(255, 255, 255, 0) 0.375em) 3em 0, radial-gradient(circle, var(--bg-shapes) 0.3em, rgba(255, 255, 255, 0) 0.3em) 0 3em;
+  background-size: 6em 6em;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .2px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(109, 22, 0);
+}
+
+.button:hover {
+  background-color: #cecece;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.button {
+   background-color: #cecece;
+   font-family: 'Playfair Display', serif;
+   padding: .5rem 1.5rem;
+   border-radius: 3px;
+   font-size: 1.7rem;
+   display:inline-block;
+   color: black;
+   border: 1px solid rgba(0,0,0,0.2);
+}
+
+.button.button-small {
+  font-size: 1.2rem;
+
+}
+
+img {
+  max-width: 800px;
+  border: 2px solid #3d3d3d;
+}
+
+.columns {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .columns, .title {
+    flex-direction: column !important;
+  }
+  .column {
+    margin-bottom: 3rem;
+  }
+  .reversed-mobile {
+      flex-direction: column-reverse !important;
+    
+  }
+  .title h1 {
+    margin: 0 !important;
+  }
+  .title img {
+    display: none !important;
+  }
+  nav ul {
+    flex-direction: column !important;
+    align-content: center;
+  }
+}
+
+.is-vcentered {
+  align-items: center;
+}
+
+.column {
+  flex-basis: 50%;
+  padding: 0 1rem;
+}
+
+.is-4 {
+  flex-basis: 33.33333333%;
+}
+
+.is-8 {
+  flex-basis: 66.6666666%;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+section:not(:first-of-type) {
+  padding: 3rem 0 4rem 0;
+  border-top: 1px solid #cecece;
+}
+
+section:first-of-type {
+  padding: 2rem 0 4rem 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* paper effect https://codepen.io/mlms13/pen/LKFoy */
+.site-wrapper {
+    max-width: 800px;
+    padding: 2rem 1rem 4rem 1rem;
+    width: 100%;
+    background-color: #fdfdfb;
+    background: linear-gradient(220deg, rgba(253,253,251,1) 40%,rgb(240, 240, 240) 100%); 
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    border-radius: 2px;
+
+}
+
+.site-wrapper:before, .site-wrapper:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-radius: 2px;
+}
+.site-wrapper:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-0.3deg);
+}
+.site-wrapper:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -2px;
+  top: 15px;
+  transform: rotate(-1deg);
+}
+
+.title h1 {
+    font-size: 3rem;
+    margin: 0 2rem 0 0;
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 4px;
+}
+
+.title a {
+  display: block;
+
+}
+
+.title {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.title img {
+  display: inline-block;
+  width: 60px;
+  border: none;
+}
+form[name='newsletter'] {
+  max-width: 500px;
+  margin: 0 auto;
+}
+form[name='newsletter'] button {
+  font-size: 1.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+form[name='newsletter'] input {
+  height: 2rem;
+  width: 250px;
+  font-size: 1.3rem;
+  display: block;
+  margin: 0 auto;
+}
+
+header nav {
+    padding: 0 1rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+header nav ul li {
+    display: block;
+    font-family: 'Playfair Display', cursive;
+    padding: .5rem 2rem;
+    text-align: center;
+}
+
+.hero-text {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+article.issue {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.spotlight-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.spotlight-artist {
+    margin: 5rem 0 1rem;
+}
+
+footer {
+    text-align: center;
+}

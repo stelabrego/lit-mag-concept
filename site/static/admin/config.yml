@@ -1,0 +1,145 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "site/static/media"
+public_folder: "/media"
+collections:
+  - name: "about"
+    label: "About"
+    folder: "site/content/about"
+    create: false
+    filter: {field: "cms", value: true}
+    identifier_field: "title"
+    editor:
+     preview: false
+    fields:
+      - label: "cms"
+        name: "cms"
+        widget: "hidden"
+        required: true
+        default: true
+      - label: "Title"
+        name: "title"
+        required: true
+        widget: "string"
+      - label: "Description"
+        name: "body"
+        required: true
+        widget: "markdown"
+  - name: "artists"
+    label: "Artists"
+    filter: {field: "cms", value: true}
+    folder: "site/content/artists"
+    create: true
+    identifier_field: "name"
+    editor:
+     preview: false
+    fields:
+      - label: "cms"
+        name: "cms"
+        widget: "hidden"
+        required: true
+        default: true
+      - label: "Name"
+        name: "name"
+        required: true
+        widget: "string"
+      - label: "Image"
+        name: "image"
+        required: true
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+  - name: "artwork"
+    label: "Artwork"
+    filter: {field: "cms", value: true}
+    folder: "site/content/artwork"
+    create: true
+    identifier_field: "title"
+    editor:
+     preview: false
+    fields:
+      - label: "cms"
+        name: "cms"
+        widget: "hidden"
+        required: true
+        default: true
+      - label: "Artist"
+        name: "artist"
+        widget: "relation"
+        collection: "artists"
+        searchFields: ["name"]
+        valueField: "name"
+        multiple: false
+        displayFields: ["name"]
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Content"
+        name: "body"
+        required: true
+        widget: "markdown"
+  - name: "issues"
+    label: "Issues"
+    filter: {field: "cms", value: true}
+    identifier_field: "title"
+    folder: "site/content/issues"
+    create: true
+    editor:
+     preview: false
+    fields:
+      - label: "cms"
+        name: "cms"
+        widget: "hidden"
+        required: true
+        default: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Publish Date"
+        name: "date"
+        widget: "date"
+        required: true
+  - name: "spotlight"
+    label: "Spotlight"
+    filter: {field: "cms", value: true}
+    identifier_field: "artist"
+    folder: "site/content/spotlight"
+    create: true
+    fields:
+      - label: "cms"
+        name: "cms"
+        widget: "hidden"
+        required: true
+        default: true
+      - label: "Artist"
+        name: "artist"
+        widget: "relation"
+        collection: "artists"
+        searchFields: ["name"]
+        valueField: "name"
+        multiple: false
+        displayFields: ["name"]
+        required: true
+      - label: "Featured Art"
+        name: "featuredArt"
+        widget: "relation"
+        collection: "artwork"
+        searchFields: ["title", "artist"]
+        valueField: "title"
+        multiple: true
+        displayFields: ["title", "artist"]
+        required: true
+      - label: "Publish Date"
+        name: "date"
+        widget: "date"
+        required: true
+          
+
+      
+
+

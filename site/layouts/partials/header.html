@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href='{{ "favicon.png" | absURL }}' />
+  <link rel="stylesheet" type="text/css" media="screen" href='{{ "reset.css" | absURL }}'>
+  <link rel="stylesheet" type="text/css" media="screen" href='{{ "main.css" | absURL }}'>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:700|Playfair+Display:400,700&display=swap"
+    rel="stylesheet">
+  {{ if eq . .Site.Home }}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ end }}
+  <title>{{ .Title }}{{ if ne . .Site.Home }} | {{ .Site.Home.Title }}{{ end }}</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <header>
+      <div class="title">
+        <a href='{{ "" | absURL }}'>
+          <h1>{{.Site.Home.Title}}</h1>
+        </a>
+        <img src='/media/sun.svg'>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href='{{ "" | absURL }}'>HOME</a>
+          </li>
+          <li>
+            <a href='{{ "issues" | absURL }}'>ISSUES</a>
+          </li>
+          <li>
+            <a href='{{ "spotlight" | absURL }}'>SPOTLIGHTS</a>
+          </li>
+          <li>
+            <a href='{{ "about" | absURL }}'>ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>

@@ -1,0 +1,53 @@
+{{ partial "header.html" . }}
+<section>
+  <h1>{{ .Params.heroText }}</h1>
+  <div class="columns is-vcentered reversed-mobile">
+    <div class='column hero-text is-4'>
+      {{ .Content }}
+      <a class='button' href='https://submitable.com'>Submit</a>
+    </div>
+    <div class='column is-8'>
+      <img src='{{ .Params.heroImage }}'>
+    </div>
+  </div>
+
+</section>
+<section>
+  <h1>Artist Spotlight</h1>
+  {{ with .Site.GetPage "spotlight" }}
+  {{ range first 1 .Pages.ByDate.Reverse }}
+  {{ $artistName := .Params.artist }}
+  {{ with .Site.GetPage "artists" }}
+  {{ range .Resources }}
+  {{/*  <h3>.Params.name = {{ .Params.name }}</h3>
+  <h3>$artistName = {{ $artistName }}</h3> */}}
+  {{ if eq .Params.name $artistName }}
+  <div class='columns is-vcentered reversed reversed-mobile'>
+    <div class='column'>
+      <h2>{{ $artistName }}</h2>
+      <p>{{ .Summary }}</p>
+    </div>
+    <div class="column">
+      <img src='{{ .Params.image | absURL }}' alt="">
+    </div>
+  </div>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</section>
+<section>
+  <h1>Join Our Newsletter</h1>
+  <form name="newsletter" method="POST" data-netlify="true">
+    <div class='columns is-vcentered'>
+      <div class='column'>
+        <input type="email" name="email" placeholder="Your email" />
+      </div>
+      <div class='column'>
+        <button class='button button-small' type="submit">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</section>
+{{ partial "footer.html" . }}

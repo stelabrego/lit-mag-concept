@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+{{ $artistName := .Params.artist }}
+{{ $featuredArt := .Params.featuredArt }}
+<section class='spotlight-content'>
+    {{ with .Site.GetPage "artwork" }}
+    {{ range .Resources }}
+    {{ if in $featuredArt .Title }}
+    {{ if eq $artistName .Params.artist }}
+    <h2>{{.Title}}</h2>
+    {{ .Content }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</section>
+<section class='spotlight-artist'>
+    {{ with .Site.GetPage "artists" }}
+    {{ range .Resources }}
+    {{ if eq $artistName .Params.name }}
+    <div class="image small">
+        <img src='{{ .Params.image | absURL }}' alt="">
+    </div>
+    <div class='text'>
+        <h2 class="no-top-margin">{{ .Params.name }}</h2>
+        {{ .Summary }}
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+
+</section>
+
+{{ partial "footer.html" . }}
