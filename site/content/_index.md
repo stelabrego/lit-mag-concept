@@ -1,6 +1,7 @@
 ---
 title: My Delicate Sun
 heroImage: media/hero.jpg
-heroText: "Our Fall Issue Releasing 10/15"
+heroText: ""
 ---
-Theme: Queer Intimacy
+Next Issue:  
+Queer Intimacy
