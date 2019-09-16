@@ -3,7 +3,7 @@
 <h1>Spotlights</h1>
 {{ range .Pages.ByDate.Reverse }}
 {{ $spotlightPage := . }}
-<div class="spotlight">
+<article class="spotlight">
   <div class='spotlight-content'>
     {{ with .Site.GetPage "artists" }}
     {{ range .Resources }}
@@ -24,7 +24,7 @@
     {{ end }}
     {{ end }}
   </div>
-</div>
+</article>
 
 {{ end }}
 </section>
