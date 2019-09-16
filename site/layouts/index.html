@@ -17,16 +17,16 @@
   {{ with .Site.GetPage "spotlight" }}
   {{ range first 1 .Pages.ByDate.Reverse }}
   {{ $artistName := .Params.artist }}
-  {{ with .Site.GetPage "artists" }}
-  {{ range .Resources }}
-  {{/*  <h3>.Params.name = {{ .Params.name }}</h3>
-  <h3>$artistName = {{ $artistName }}</h3> */}}
-  {{ if eq .Params.name $artistName }}
+
   <div class='columns is-vcentered reversed reversed-mobile'>
     <div class='column'>
-      <h2>{{ $artistName }}</h2>
+      <h2>{{ .Title }}</h2>
       <p>{{ .Summary }}</p>
+      <a href='{{ .Permalink }}'>Read more...</a>
     </div>
+    {{ with .Site.GetPage "artists" }}
+    {{ range .Resources }}
+    {{ if eq .Params.name $artistName }}
     <div class="column">
       <img src='{{ .Params.image | absURL }}' alt="">
     </div>

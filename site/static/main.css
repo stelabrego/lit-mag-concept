@@ -20,7 +20,7 @@ h1 {
   margin-bottom: 3rem;
 }
 
-p {
+p,a  {
   font-size: 1.2rem;
   font-family: 'Playfair Display', serif;
   letter-spacing: .2px;
@@ -49,14 +49,15 @@ a:visited {
 }
 
 .button {
-   background-color: #cecece;
+   background-color: #ecd3d1;
    font-family: 'Playfair Display', serif;
    padding: .5rem 1.5rem;
    border-radius: 3px;
    font-size: 1.7rem;
    display:inline-block;
    color: black;
-   border: 1px solid rgba(0,0,0,0.2);
+   /* border: 1px solid rgba(0,0,0,0.2); */
+   margin: 0 2rem;
 }
 
 .button.button-small {
@@ -71,6 +72,13 @@ img {
 
 .columns {
   display: flex;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 4rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -96,6 +104,10 @@ img {
   nav ul {
     flex-direction: column !important;
     align-content: center;
+  }
+
+  .content {
+    padding: 0;
   }
 }
 
@@ -201,7 +213,7 @@ img {
   display: inline-block;
   width: 60px;
   border: none;
-  opacity: .2;
+  opacity: 1;
 }
 form[name='newsletter'] {
   max-width: 500px;
@@ -243,11 +255,11 @@ header nav ul li {
     display: block;
     font-family: 'Playfair Display', cursive;
     padding: .5rem 2rem;
-    text-align: center;
-    
+    text-align: center;    
 }
 header nav ul li a {
   color: black;
+  font-size: 1rem;
 }
 
 
@@ -261,15 +273,10 @@ article.issue {
     margin-bottom: 4rem;
 }
 
-.spotlight-content {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.spotlight-artist {
-    margin: 5rem 0 1rem;
-}
-
 footer {
     text-align: center;
+}
+
+.content h1, h2, h3 {
+  text-align: left;
 }
