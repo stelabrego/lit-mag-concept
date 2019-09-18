@@ -47,5 +47,5 @@ build:
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv/site"
-  instant_preview_command: hugo server --renderToDisk --port 8080 --bind 0.0.0.0
+  instant_preview_command: hugo server -D --renderToDisk --port 8080 --bind 0.0.0.0
 version: 0.58.2
