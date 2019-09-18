@@ -35,3 +35,5 @@ fields:
       type: pages
       section: artwork
   label: Featured Artwork
+pages:
+- site/content/spotlight/chatting-with-natasha-vargas.md
