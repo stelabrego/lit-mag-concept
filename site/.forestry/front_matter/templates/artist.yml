@@ -11,5 +11,6 @@ fields:
   name: image
   label: Artist Image
 pages:
+- site/content/artists/emery-davis.md
 - site/content/artists/natasha-vargas.md
 - site/content/artists/cearra-hatheway.md
