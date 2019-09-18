@@ -1,0 +1,10 @@
+---
+label: Artwork
+hide_body: false
+fields:
+- type: text
+  name: artist
+  label: artist
+- type: text
+  name: title
+  label: title
