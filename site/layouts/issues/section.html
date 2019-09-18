@@ -5,9 +5,7 @@
   <p>No issues yet!</p>
   {{ end }}
   {{ range .Pages.ByDate.Reverse }}
-  <article class="issue">
-    <a class='issue-title' href={{ .Permalink }}>{{ .Title }}</a>
-  </article>
+  <a class='issue-title' href={{ .Permalink }}>{{ .Title }}</a>
   {{ end }}
 </section>
 {{ partial "footer.html" . }}
