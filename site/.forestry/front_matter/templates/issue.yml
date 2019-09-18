@@ -24,4 +24,5 @@ fields:
       section: artwork
   label: Artwork
 pages:
+- site/content/issues/summer-2019.md
 - site/content/issues/spring-2019.md
