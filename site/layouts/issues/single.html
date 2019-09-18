@@ -2,17 +2,19 @@
 <section>
   <div class='content'>
     <h1>{{.Title}}</h1>
-    {{ $ := .}}
-    {{ if .Params.featuredArt }}
     {{ range .Params.featuredArt }}
-    {{$featuredArtTitle := .}}
-    {{ with $.Site.GetPage "artwork" }}
-    {{ range .Resources }}
-    {{ if eq $featuredArtTitle .Title }}
+    {{ $artworkPath := . }}
+    {{ range ($.Site.GetPage "artwork").Resources }}
+    {{ if in $artworkPath .Name }}
+    {{ $artworkTitle := .Title }}
+    {{ $artworkContent := .Content }}
+    {{ $artistPath := .Params.artist }}
+    {{ range ($.Site.GetPage "artists").Resources }}
+    {{ if in $artistPath .Name }}
     <article>
-      <h2>{{.Title}}</h2>
-      <h3>By {{.Params.artist}}</h3>
-      {{ .Content }}
+      <h2>{{$artworkTitle}}</h2>
+      <h3>By {{.Title}}</h3>
+      {{ $artworkContent}}
     </article>
     {{ end }}
     {{ end }}
