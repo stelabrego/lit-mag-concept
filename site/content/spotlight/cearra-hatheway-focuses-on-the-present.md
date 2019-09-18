@@ -1,7 +1,6 @@
 +++
 artist = "artists/cearra-hatheway.md"
 date = "2019-07-10T23:56:10+00:00"
-draft = true
 featuredArt = ["artwork/when-the-floor-breaks-beneath-you.md"]
 title = "Cearra Hatheway Focuses on the Present"
 
