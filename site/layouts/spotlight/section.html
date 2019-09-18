@@ -2,19 +2,19 @@
 <section>
   <h1>Spotlights</h1>
   <div class='content'>
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $spotlightPage := . }}
+    <article class="spotlight">
 
-  {{ range .Pages.ByDate.Reverse }}
-  {{ $spotlightPage := . }}
-  <article class="spotlight">
-      {{ with .Site.GetPage "artists" }}
-      {{ range .Resources }}
-      {{ if eq .Title $spotlightPage.Params.artist }}
-      <div class="image">
-        <img src='{{ .Params.image | absURL }}' alt="">
+      {{ $artistPath := .Params.artist }}
+      {{ range ($.Site.GetPage "artists").Resources }}
+      {{ if in $artistPath .Name }}
+      <div class="image small">
+        <img src='{{ .Params.image }}' alt="">
       </div>
       {{ end }}
       {{ end }}
-      {{ end }}
+
       <div class='text'>
         <p>{{ .Date.Format "January 2006" }}</p>
         <h2 class="no-top-margin">{{ .Title }}</h2>
@@ -24,10 +24,10 @@
         <a href="{{ .Permalink }}">See More…</a>
       </div>
 
-  </article>
+    </article>
 
-  {{ end }}
-</div>
+    {{ end }}
+  </div>
 
 </section>
 {{ partial "footer.html" . }}

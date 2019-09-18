@@ -1,17 +1,15 @@
 {{ partial "header.html" . }}
-{{ $artistName := .Params.artist }}
-{{ $featuredArt := .Params.featuredArt }}
-
+{{ $artistPath := .Params.artist }}
+{{ $featuredArtPaths := .Params.featuredArt }}
+{{ $artistName := "" }}
 <section>
   <div class='content'>
-
-    {{ with .Site.GetPage "artists" }}
-    {{ range .Resources }}
-    {{ if eq $artistName .Title }}
+    {{ range ($.Site.GetPage "artists").Resources }}
+    {{ if in $artistPath .Name }}
+    {{ $artistName = .Title }}
     <div class="image small">
-      <img src='{{ .Params.image | absURL }}' alt="">
+      <img src='{{ .Params.image }}' alt="">
     </div>
-    {{ end }}
     {{ end }}
     {{ end }}
     <p>{{ .Date.Format "January 2006" }}</p>
@@ -20,18 +18,17 @@
     <p>{{ .Content }}</p>
   </div>
 </section>
-{{ if $featuredArt}}
+{{ if $featuredArtPaths }}
 <hr>
 <section>
   <div class='content'>
-    {{ with .Site.GetPage "artwork" }}
-    {{ range .Resources }}
-    {{ if in $featuredArt .Title }}
-    {{ if eq $artistName .Params.artist }}
+    {{ range $featuredArtPaths }}
+    {{ $artPath := . }}
+    {{ range ($.Site.GetPage "artwork").Resources }}
+    {{ if in $artPath .Name }}
     <h2>{{.Title}}</h2>
-    <h3>By {{.Params.artist}}</h3>
+    <h3>By {{$artistName}}</h3>
     {{ .Content }}
-    {{ end }}
     {{ end }}
     {{ end }}
     {{ end }}
