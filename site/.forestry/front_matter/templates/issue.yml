@@ -1,0 +1,13 @@
+---
+label: Issue
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: list
+  name: featuredArt
+  label: featuredArt
+- type: datetime
+  name: date
+  label: date
