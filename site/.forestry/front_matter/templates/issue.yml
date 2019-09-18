@@ -4,10 +4,22 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
-- type: list
-  name: featuredArt
-  label: featuredArt
+  label: Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    required: true
+  default: now
+- name: featuredArt
+  type: list
+  config:
+    use_select: true
+    min: '1'
+    max: 
+    source:
+      type: pages
+      section: artwork
+  label: Artwork
