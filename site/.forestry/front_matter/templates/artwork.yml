@@ -20,4 +20,5 @@ fields:
       path: 
   label: Artist
 pages:
+- site/content/artwork/warmth-of-literature.md
 - site/content/artwork/when-the-floor-breaks-beneath-you.md
