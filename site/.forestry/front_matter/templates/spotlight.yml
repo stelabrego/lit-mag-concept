@@ -36,5 +36,6 @@ fields:
       section: artwork
   label: Featured Artwork
 pages:
+- site/content/spotlight/cearra-hatheway-focuses-on-the-present.md
 - site/content/spotlight/the-tender-art-of-emery.md
 - site/content/spotlight/chatting-with-natasha-vargas.md
