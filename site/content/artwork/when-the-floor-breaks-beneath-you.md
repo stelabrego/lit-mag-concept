@@ -1,6 +1,5 @@
 +++
 artist = "artists/cearra-hatheway.md"
-draft = true
 title = "when the floor breaks beneath you"
 
 +++
