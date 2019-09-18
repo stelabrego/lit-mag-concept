@@ -1,5 +1,4 @@
 ---
-cms: true
 artist: Natasha Vargas
 title: Natasha Vargus Writes about Heartbreak
 featuredArt:

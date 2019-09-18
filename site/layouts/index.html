@@ -27,7 +27,7 @@
     </div>
     {{ with .Site.GetPage "artists" }}
     {{ range .Resources }}
-    {{ if eq .Params.name $artistName }}
+    {{ if eq .Title $artistName }}
     <div class="column">
       <img src='{{ .Params.image | absURL }}' alt="">
     </div>

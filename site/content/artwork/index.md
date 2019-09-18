@@ -1,3 +1,3 @@
 ---
-cms: false
+headless: true
 ---

@@ -3,7 +3,6 @@ artist: Emery Davis
 featuredArt:
   - You Showed Me Love
 date: 2019-06-07
-cms: true
 title: Emery Davis Loves His Friends 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae tortor condimentum lacinia quis. Habitant morbi tristique senectus et netus et. Vitae ultricies leo integer malesuada. Velit dignissim sodales ut eu sem. Quis viverra nibh cras pulvinar mattis nunc sed. Donec pretium vulputate sapien nec. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Eu tincidunt tortor aliquam nulla facilisi cras. Risus nullam eget felis eget nunc lobortis. Magna sit amet purus gravida quis blandit turpis cursus. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Sed sed risus pretium quam vulputate dignissim suspendisse in. At imperdiet dui accumsan sit amet nulla.

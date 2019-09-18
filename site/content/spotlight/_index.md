@@ -1,4 +1,3 @@
 ---
 title: "Spotlight"
-cms: false
 ---

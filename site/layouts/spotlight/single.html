@@ -7,7 +7,7 @@
 
     {{ with .Site.GetPage "artists" }}
     {{ range .Resources }}
-    {{ if eq $artistName .Params.name }}
+    {{ if eq $artistName .Title }}
     <div class="image small">
       <img src='{{ .Params.image | absURL }}' alt="">
     </div>

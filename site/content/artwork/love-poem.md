@@ -1,7 +1,6 @@
 ---
 artist: Natasha Vargas
 title: Love Poem
-cms: true
 ---
 Lorem ipsum dolor sit amet.  
 consectetur adipiscing elit  
