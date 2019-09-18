@@ -1,7 +1,6 @@
 +++
 artist = "artists/natasha-vargas.md"
 date = "2019-09-18T23:14:49+00:00"
-draft = true
 featuredArt = ["artwork/warmth-of-literature.md"]
 title = "Chatting with Natasha Vargas"
 
