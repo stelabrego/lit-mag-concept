@@ -23,3 +23,5 @@ fields:
       type: pages
       section: artwork
   label: Artwork
+pages:
+- site/content/issues/spring-2019.md
