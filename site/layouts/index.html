@@ -1,4 +1,11 @@
 {{ partial "header.html" . }}
+<section class='hero'>
+  {{ with .Site.GetPage "issues" }}
+  {{ range first 1 .Pages.ByDate.Reverse }}
+  <a class='hero-button' href='{{.RelPermalink}}'>Latest Issue: <b>{{.Title}}</b></a>
+  {{ end }}
+  {{ end }}
+</section>
 <section>
   <h1>{{ .Params.heroText }}</h1>
   <div class="columns is-vcentered reversed-mobile">
@@ -17,7 +24,6 @@
   <h1>Artist Spotlight</h1>
   {{ with .Site.GetPage "spotlight" }}
   {{ range first 1 .Pages.ByDate.Reverse }}
-
   <div class='columns is-vcentered reversed reversed-mobile'>
     <div class='column'>
       <h2>{{ .Title }}</h2>
@@ -34,8 +40,8 @@
     {{ end }}
     {{ end }}
 
-  {{ end }}
-  {{ end }}
+    {{ end }}
+    {{ end }}
 </section>
 <hr>
 <section>
