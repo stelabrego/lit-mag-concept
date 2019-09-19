@@ -291,6 +291,7 @@ header nav ul li a {
 
 .hero-text p {
   font-size: 1.7rem;
+  margin-top: 0;
 }
 
 article.issue {
