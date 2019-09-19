@@ -122,6 +122,14 @@ hr {
   .content {
     padding: 0;
   }
+
+  .site-wrapper:before, .site-wrapper:after {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
 }
 
 .is-vcentered {
