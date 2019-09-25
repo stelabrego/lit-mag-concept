@@ -1,11 +1,13 @@
 {{ partial "header.html" . }}
-<section>
+<section class='slideInUp'>
   <h1>Issues</h1>
-  {{ if eq (len .Pages) 0 }}
-  <p>No issues yet!</p>
-  {{ end }}
-  {{ range .Pages.ByDate.Reverse }}
-  <a class='issue-title' href={{ .Permalink }}>{{ .Title }}</a>
-  {{ end }}
+  <div>
+    {{ if eq (len .Pages) 0 }}
+    <p>No issues yet!</p>
+    {{ end }}
+    {{ range .Pages.ByDate.Reverse }}
+    <a class='issue-title' href={{ .Permalink }}>{{ .Title }}</a>
+    {{ end }}
+  </div>
 </section>
 {{ partial "footer.html" . }}

@@ -1,31 +1,20 @@
 {{ partial "header.html" . }}
-<section class='hero'>
+
+<section class='hero slideInUp'>
   {{ with .Site.GetPage "issues" }}
   {{ range first 1 .Pages.ByDate.Reverse }}
-  <a class='hero-button' href='{{.RelPermalink}}'>Latest Issue: <b>{{.Title}}</b></a>
+  <a class='hero-button' href='{{.RelPermalink}}'>Latest Issue: <b>{{.Title}}</b>
+    {{ readFile "static/media/chevron-right.svg" | safeHTML}}
+  </a>
   {{ end }}
   {{ end }}
 </section>
-<section>
-  <h1>{{ .Params.heroText }}</h1>
-  <div class="columns is-vcentered reversed-mobile">
-    <div class='column hero-text is-4'>
-      {{ .Content }}
-      <a class='button' href='https://www.submittable.com/'>Submit Artwork</a>
-    </div>
-    <div class='column is-8'>
-      <img src='{{ .Params.heroImage }}'>
-    </div>
-  </div>
-
-</section>
-<hr>
 <section>
   <h1>Artist Spotlight</h1>
   {{ with .Site.GetPage "spotlight" }}
   {{ range first 1 .Pages.ByDate.Reverse }}
   <div class='columns is-vcentered reversed reversed-mobile'>
-    <div class='column'>
+    <div class='column slideInUp'>
       <h2>{{ .Title }}</h2>
       <p>{{ .Summary }}</p>
       <a href='{{ .Permalink }}'>Read more...</a>
@@ -42,6 +31,19 @@
 
     {{ end }}
     {{ end }}
+</section>
+<hr>
+<section>
+  <h1>{{ .Params.heroText }}</h1>
+  <div class="columns is-vcentered reversed-mobile">
+    <div class='column hero-text is-4'>
+      {{ .Content }}
+      <a class='button' href='https://www.submittable.com/'>Submit Artwork</a>
+    </div>
+    <div class='column is-8'>
+      <img src='{{ .Params.heroImage }}'>
+    </div>
+  </div>
 </section>
 <hr>
 <section>

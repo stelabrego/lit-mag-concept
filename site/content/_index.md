@@ -4,4 +4,4 @@ heroImage: media/hero.jpg
 heroText: ""
 ---
 Next Issue:  
-Queer Intimacy
+Exploring Intimacy

@@ -3,7 +3,7 @@
 {{ $featuredArtPaths := .Params.featuredArt }}
 {{ $artistName := "" }}
 <section>
-  <div class='content'>
+  <div class='content slideInUp'>
     {{ range ($.Site.GetPage "artists").Resources }}
     {{ if in $artistPath .Name }}
     {{ $artistName = .Title }}
@@ -13,7 +13,6 @@
     {{ end }}
     {{ end }}
     <p>{{ .Date.Format "January 2006" }}</p>
-
     <h1>{{ .Title }}</h1>
     <p>{{ .Content }}</p>
   </div>

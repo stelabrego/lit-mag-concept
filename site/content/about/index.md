@@ -1,4 +1,4 @@
 ---
 title: About
 ---
-This is a conceptual website for an online literary magazine with the goal of publishing works relating to the topic of queer love.
+This is a conceptual website for a fictitious online literary journal for LGBTQIA+ writers. For more information, visit my personal website, [stelabrego.com](https://stelabrego.com/portfolio/literary-magazine-concept).

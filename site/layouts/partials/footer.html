@@ -1,21 +1,8 @@
 
 <footer>
-    <p>My Delicate Sun is a concept website by <a href='https://stelabrego.com'>Stel Abrego</a></p>
+    <p><a href='https://stelabrego.com'>Stel Abrego</a> 2019</p>
 </footer>
 </div>
-{{ if eq . .Site.Home }}
-<script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                });
-            }
-        });
-    }
-</script>
-{{ end }}
 </body>
 
 </html>
